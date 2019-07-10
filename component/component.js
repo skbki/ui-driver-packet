@@ -10,11 +10,11 @@ import NodeDriver from 'shared/mixins/node-driver';
 import fetch from '@rancher/ember-api-store/utils/fetch';
 import layout from './template';
 
-const OS_WHITELIST = ['centos_7', 'coreos_stable', 'ubuntu_14_04', 'ubuntu_16_04', 'rancher'];
+const OS_WHITELIST = ['custom_ipxe', 'centos_7', 'coreos_stable', 'ubuntu_14_04', 'ubuntu_16_04', 'rancher'];
 const PLAN_BLACKLIST = ['baremetal_2a']; // quick wheres james spader?
 const DEFAULTS = {
-  os:           'ubuntu_16_04',
-  facilityCode: 'ewr1',
+  os:           'custom_ipxe',
+  facilityCode: 'ams1',
   plan:         'baremetal_0',
   billingCycle: 'hourly',
   IPXEScriptURL: 'https://raw.githubusercontent.com/rancher/os/v1.5.x/scripts/hosting/rancheros.ipxe',
